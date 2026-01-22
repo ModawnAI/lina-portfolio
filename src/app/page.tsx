@@ -135,9 +135,9 @@ export default function Home() {
           className="relative z-10 text-center max-w-4xl"
         >
           <motion.div variants={fadeInUp} className="mb-6">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-800/50 border border-purple-700 text-purple-300 text-sm">
-              <Sparkles className="w-4 h-4" />
-              넷플릭스 조명감독
+            <span className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-purple-800/50 border border-purple-700 text-purple-300 text-sm">
+              <Image src="/netflix-logo.svg" alt="Netflix" width={70} height={19} />
+              조명감독
             </span>
           </motion.div>
 
@@ -313,10 +313,8 @@ export default function Home() {
                   <Play className="w-12 h-12 text-purple-600 group-hover:text-purple-400 transition-colors" />
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="px-2 py-1 bg-red-600/20 text-red-400 text-xs rounded">
-                      {work.platform}
-                    </span>
+                  <div className="flex items-center gap-3 mb-2">
+                    <Image src="/netflix-logo.svg" alt="Netflix" width={60} height={16} />
                     <span className="text-purple-500 text-sm">{work.year}</span>
                   </div>
                   <h3 className="text-xl font-bold text-purple-100 mb-1">
