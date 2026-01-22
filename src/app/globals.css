@@ -4,31 +4,31 @@
 @theme {
   --font-family-sans: 'Noto Sans KR', sans-serif;
 
-  /* Navy blue color palette */
-  --color-navy-50: #f0f4f8;
-  --color-navy-100: #d9e2ec;
-  --color-navy-200: #bcccdc;
-  --color-navy-300: #9fb3c8;
-  --color-navy-400: #829ab1;
-  --color-navy-500: #627d98;
-  --color-navy-600: #486581;
-  --color-navy-700: #334e68;
-  --color-navy-800: #243b53;
-  --color-navy-900: #102a43;
-  --color-navy-950: #0a1929;
+  /* Pink color palette */
+  --color-pink-50: #fdf2f8;
+  --color-pink-100: #fce7f3;
+  --color-pink-200: #fbcfe8;
+  --color-pink-300: #f9a8d4;
+  --color-pink-400: #f472b6;
+  --color-pink-500: #ec4899;
+  --color-pink-600: #db2777;
+  --color-pink-700: #be185d;
+  --color-pink-800: #9d174d;
+  --color-pink-900: #831843;
+  --color-pink-950: #500724;
 }
 
 @layer base {
   * {
-    @apply border-navy-200;
+    @apply border-pink-200;
   }
 
   body {
-    @apply bg-navy-950 text-navy-100 font-sans antialiased;
+    @apply bg-pink-50 text-pink-900 font-sans antialiased;
   }
 
   ::selection {
-    @apply bg-navy-600 text-white;
+    @apply bg-pink-400 text-white;
   }
 }
 
@@ -38,6 +38,6 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-navy-300 via-navy-200 to-navy-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-pink-500 via-pink-400 to-pink-600 bg-clip-text text-transparent;
   }
 }
