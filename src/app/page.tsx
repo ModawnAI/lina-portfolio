@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { GoogleGeminiEffect } from "@/components/ui/google-gemini-effect";
@@ -101,6 +102,18 @@ export default function Home() {
         ref={heroRef}
         className="relative h-[200vh] bg-pink-950 w-full overflow-clip"
       >
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero.jpg"
+            alt="Hero background"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-pink-950/50 via-pink-950/70 to-pink-950" />
+        </div>
+
         {/* Google Gemini Effect Background */}
         <GoogleGeminiEffect
           pathLengths={[
