@@ -160,9 +160,11 @@ export default function Home() {
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex gap-4 justify-center">
-            <Button size="lg" className="gap-2">
-              <Play className="w-4 h-4" />
-              작품 보기
+            <Button asChild size="lg" className="gap-2">
+              <a href="https://www.artstation.com/artwork/P69xe3" target="_blank" rel="noopener noreferrer">
+                <Play className="w-4 h-4" />
+                작품 보기
+              </a>
             </Button>
             <Button variant="outline" size="lg">
               연락하기
