@@ -42,11 +42,33 @@ const works = [
   },
 ];
 
+const projects = [
+  "몸값",
+  "귀공자",
+  "콘크리트 마켓",
+  "재벌집 막내아들",
+  "대행사",
+  "법쩐",
+  "화란",
+  "발레리나",
+  "황야",
+  "D.P 2",
+  "크로스",
+  "유쾌한 왕따",
+  "폭군",
+  "히어로는 아닙니다만",
+  "명가",
+  "조게캐셔로",
+  "넉오프",
+  "슬픈열대",
+  "에스콰이어",
+  "백번의 추억",
+  "서울자가에 대기업 다니는 김부장 이야기",
+];
+
 const stats = [
-  { number: "15+", label: "작품 참여" },
-  { number: "8", label: "넷플릭스 작품" },
-  { number: "12년", label: "경력" },
-  { number: "3", label: "수상 경력" },
+  { number: "21+", label: "작품 참여" },
+  { number: "4년", label: "경력" },
 ];
 
 export default function Home() {
@@ -326,8 +348,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Awards Section */}
+      {/* Filmography Section */}
       <section className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-light mb-4 text-gray-100">
+              Filmography
+            </h2>
+            <p className="text-gray-400">
+              VFX Lighting Artist로 참여한 프로젝트
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center gap-3"
+          >
+            {projects.map((project, index) => (
+              <motion.span
+                key={project}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.03 }}
+                className="px-4 py-2 bg-gray-900 border border-gray-800 rounded-full text-sm text-gray-300 hover:bg-gray-800 hover:text-gray-100 transition-colors"
+              >
+                {project}
+              </motion.span>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Awards Section */}
+      <section className="py-24 px-6 bg-gray-900/30">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
