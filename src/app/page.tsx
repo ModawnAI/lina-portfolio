@@ -79,18 +79,18 @@ export default function Home() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-purple-950/80 border-b border-purple-800"
+        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-gray-950/80 border-b border-gray-800"
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="text-xl font-bold text-purple-100">김리나</span>
-          <div className="flex gap-6 text-sm text-purple-300">
-            <a href="#about" className="hover:text-purple-100 transition-colors">
+          <span className="text-xl font-light text-gray-100">김리나</span>
+          <div className="flex gap-6 text-sm text-gray-300">
+            <a href="#about" className="hover:text-gray-100 transition-colors">
               소개
             </a>
-            <a href="#works" className="hover:text-purple-100 transition-colors">
+            <a href="#works" className="hover:text-gray-100 transition-colors">
               작품
             </a>
-            <a href="#contact" className="hover:text-purple-100 transition-colors">
+            <a href="#contact" className="hover:text-gray-100 transition-colors">
               연락처
             </a>
           </div>
@@ -100,7 +100,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative h-[200vh] bg-purple-950 w-full overflow-clip"
+        className="relative h-[200vh] bg-gray-950 w-full overflow-clip"
       >
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
@@ -111,7 +111,7 @@ export default function Home() {
             className="object-cover opacity-30"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-950/50 via-purple-950/70 to-purple-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-gray-950/70 to-gray-950" />
         </div>
 
         {/* Google Gemini Effect Background */}
@@ -135,23 +135,23 @@ export default function Home() {
           className="relative z-10 text-center max-w-4xl"
         >
           <motion.div variants={fadeInUp} className="mb-6">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-800/50 border border-purple-700 text-purple-300 text-sm">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800/50 border border-gray-700 text-gray-300 text-sm">
               VFX Lighting Artist 김리나
             </span>
           </motion.div>
 
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl md:text-7xl font-black mb-6 tracking-tight"
+            className="text-5xl md:text-7xl font-extralight mb-6 tracking-tight"
           >
             <span className="gradient-text">빛으로 이야기를</span>
             <br />
-            <span className="text-purple-100">그리는 사람</span>
+            <span className="text-gray-100">그리는 사람</span>
           </motion.h1>
 
           <motion.p
             variants={fadeInUp}
-            className="text-lg md:text-xl text-purple-400 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
             안녕하세요, 조명감독 김리나입니다.
             <br />
@@ -181,16 +181,16 @@ export default function Home() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-6 h-10 rounded-full border-2 border-purple-600 flex items-start justify-center p-2"
+            className="w-6 h-10 rounded-full border-2 border-gray-600 flex items-start justify-center p-2"
           >
-            <div className="w-1 h-2 bg-purple-400 rounded-full" />
+            <div className="w-1 h-2 bg-gray-400 rounded-full" />
           </motion.div>
         </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-6 border-y border-purple-800 bg-purple-900/50">
+      <section className="py-20 px-6 border-y border-gray-800 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -208,10 +208,10 @@ export default function Home() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-black text-purple-200 mb-2">
+                <div className="text-4xl md:text-5xl font-extralight text-gray-200 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-purple-400 text-sm">{stat.label}</div>
+                <div className="text-gray-400 text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -229,12 +229,12 @@ export default function Home() {
             className="grid md:grid-cols-2 gap-12 items-center"
           >
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-purple-100">
+              <h2 className="text-3xl md:text-4xl font-light mb-6 text-gray-100">
                 빛의 예술가,
                 <br />
                 <span className="gradient-text">김리나입니다</span>
               </h2>
-              <div className="space-y-4 text-purple-300 leading-relaxed">
+              <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
                   12년간 영화와 드라마의 조명을 담당하며, 빛으로 이야기의 감정을
                   전달하는 일을 해왔습니다.
@@ -255,7 +255,7 @@ export default function Home() {
                   (skill) => (
                     <span
                       key={skill}
-                      className="px-4 py-2 bg-purple-800 border border-purple-700 rounded-full text-sm text-purple-300"
+                      className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-sm text-gray-300"
                     >
                       {skill}
                     </span>
@@ -265,8 +265,8 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="aspect-[4/5] bg-gradient-to-br from-purple-800 to-purple-900 rounded-2xl overflow-hidden border border-purple-700">
-                <div className="absolute inset-0 flex items-center justify-center text-purple-600">
+              <div className="aspect-[4/5] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700">
+                <div className="absolute inset-0 flex items-center justify-center text-gray-600">
                   <div className="text-center">
                     <FilmSlate className="w-16 h-16 mx-auto mb-4" />
                     <p className="text-sm">프로필 이미지</p>
@@ -274,15 +274,15 @@ export default function Home() {
                 </div>
               </div>
               {/* Decorative elements */}
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-700/50 rounded-2xl -z-10" />
-              <div className="absolute -top-4 -left-4 w-24 h-24 border-2 border-purple-600 rounded-2xl -z-10" />
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gray-700/50 rounded-2xl -z-10" />
+              <div className="absolute -top-4 -left-4 w-24 h-24 border-2 border-gray-600 rounded-2xl -z-10" />
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Works Section */}
-      <section id="works" className="py-24 px-6 bg-purple-900/30">
+      <section id="works" className="py-24 px-6 bg-gray-900/30">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -291,10 +291,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-100">
+            <h2 className="text-3xl md:text-4xl font-light mb-4 text-gray-100">
               주요 작품
             </h2>
-            <p className="text-purple-400 max-w-2xl mx-auto">
+            <p className="text-gray-400 max-w-2xl mx-auto">
               빛과 그림자로 완성한 작품들을 소개합니다
             </p>
           </motion.div>
@@ -308,26 +308,26 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
-                className="group relative bg-purple-900 border border-purple-800 rounded-xl overflow-hidden cursor-pointer"
+                className="group relative bg-gray-900 border border-gray-800 rounded-xl overflow-hidden cursor-pointer"
               >
-                <div className="aspect-video bg-gradient-to-br from-purple-800 to-purple-950 flex items-center justify-center">
-                  <Play className="w-12 h-12 text-purple-600 group-hover:text-purple-400 transition-colors" />
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-950 flex items-center justify-center">
+                  <Play className="w-12 h-12 text-gray-600 group-hover:text-gray-400 transition-colors" />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-2">
                     <Image src="/netflix-logo.svg" alt="Netflix" width={60} height={16} />
-                    <span className="text-purple-500 text-sm">{work.year}</span>
+                    <span className="text-gray-500 text-sm">{work.year}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-purple-100 mb-1">
+                  <h3 className="text-xl font-light text-gray-100 mb-1">
                     {work.title}
                   </h3>
-                  <p className="text-purple-400 text-sm">
+                  <p className="text-gray-400 text-sm">
                     {work.description} · {work.role}
                   </p>
                 </div>
 
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-purple-700/0 group-hover:bg-purple-700/10 transition-colors" />
+                <div className="absolute inset-0 bg-gray-700/0 group-hover:bg-gray-700/10 transition-colors" />
               </motion.div>
             ))}
           </div>
@@ -354,7 +354,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-100">
+            <h2 className="text-3xl md:text-4xl font-light mb-4 text-gray-100">
               수상 및 인정
             </h2>
           </motion.div>
@@ -383,14 +383,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
-                className="bg-purple-900/50 border border-purple-800 rounded-xl p-6 text-center"
+                className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 text-center"
               >
-                <Trophy className="w-10 h-10 text-purple-500 mx-auto mb-4" />
-                <div className="text-purple-500 text-sm mb-2">{item.year}</div>
-                <h3 className="text-lg font-bold text-purple-100 mb-1">
+                <Trophy className="w-10 h-10 text-gray-500 mx-auto mb-4" />
+                <div className="text-gray-500 text-sm mb-2">{item.year}</div>
+                <h3 className="text-lg font-light text-gray-100 mb-1">
                   {item.award}
                 </h3>
-                <p className="text-purple-400 text-sm">{item.category}</p>
+                <p className="text-gray-400 text-sm">{item.category}</p>
               </motion.div>
             ))}
           </div>
@@ -398,7 +398,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-6 bg-purple-900/50">
+      <section id="contact" className="py-24 px-6 bg-gray-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -406,10 +406,10 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-100">
+            <h2 className="text-3xl md:text-4xl font-light mb-4 text-gray-100">
               함께 작업하고 싶으신가요?
             </h2>
-            <p className="text-purple-400 mb-10 max-w-xl mx-auto">
+            <p className="text-gray-400 mb-10 max-w-xl mx-auto">
               새로운 프로젝트에 대한 문의나 협업 제안을 환영합니다.
               <br />
               아래 버튼을 클릭하여 연락해 주세요.
@@ -420,24 +420,24 @@ export default function Home() {
               이메일 보내기
             </Button>
 
-            <div className="mt-12 flex justify-center gap-8 text-purple-500">
+            <div className="mt-12 flex justify-center gap-8 text-gray-500">
               <a
                 href="#"
-                className="hover:text-purple-300 transition-colors"
+                className="hover:text-gray-300 transition-colors"
                 aria-label="Instagram"
               >
                 <InstagramLogo size={28} weight="fill" />
               </a>
               <a
                 href="#"
-                className="hover:text-purple-300 transition-colors"
+                className="hover:text-gray-300 transition-colors"
                 aria-label="YouTube"
               >
                 <YoutubeLogo size={28} weight="fill" />
               </a>
               <a
                 href="#"
-                className="hover:text-purple-300 transition-colors"
+                className="hover:text-gray-300 transition-colors"
                 aria-label="LinkedIn"
               >
                 <LinkedinLogo size={28} weight="fill" />
@@ -448,8 +448,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-purple-800">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-purple-500 text-sm">
+      <footer className="py-8 px-6 border-t border-gray-800">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-gray-500 text-sm">
           <p>&copy; 2024 김리나. All rights reserved.</p>
           <p>조명감독 포트폴리오</p>
         </div>
