@@ -137,7 +137,7 @@ export default function Home() {
           <motion.div variants={fadeInUp} className="mb-6">
             <span className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-purple-800/50 border border-purple-700 text-purple-300 text-sm">
               <Image src="/netflix-logo.svg" alt="Netflix" width={70} height={19} />
-              조명감독
+              VFX Lighting Artist 김리나
             </span>
           </motion.div>
 
