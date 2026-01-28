@@ -102,18 +102,6 @@ export default function Home() {
         ref={heroRef}
         className="relative h-[200vh] bg-gray-950 w-full overflow-clip"
       >
-        {/* Hero Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/hero.jpg"
-            alt="Hero background"
-            fill
-            className="object-cover opacity-30"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-gray-950/70 to-gray-950" />
-        </div>
-
         {/* Google Gemini Effect Background */}
         <GoogleGeminiEffect
           pathLengths={[
@@ -142,7 +130,7 @@ export default function Home() {
 
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl md:text-7xl font-extralight mb-6 tracking-tight"
+            className="text-2xl md:text-4xl font-extralight mb-6 tracking-tight"
           >
             <span className="gradient-text">빛으로 이야기를</span>
             <br />
