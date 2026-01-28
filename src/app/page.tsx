@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { GoogleGeminiEffect } from "@/components/ui/google-gemini-effect";
-import { Envelope, Play, Trophy, FilmSlate, InstagramLogo, LinkedinLogo, YoutubeLogo } from "@phosphor-icons/react";
+import { Envelope, Play, FilmSlate, InstagramLogo, LinkedinLogo, YoutubeLogo } from "@phosphor-icons/react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -350,7 +350,7 @@ export default function Home() {
 
       {/* Filmography Section */}
       <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -365,75 +365,22 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-3"
-          >
+          <div className="flex flex-col gap-2">
             {projects.map((project, index) => (
-              <motion.span
+              <motion.a
                 key={project}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                href={`https://www.google.com/search?q=${encodeURIComponent(project + " 영화")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.03 }}
-                className="px-4 py-2 bg-gray-900 border border-gray-800 rounded-full text-sm text-gray-300 hover:bg-gray-800 hover:text-gray-100 transition-colors"
+                className="px-4 py-3 border-b border-gray-800 text-gray-300 hover:bg-gray-900 hover:text-gray-100 transition-colors flex items-center justify-between group"
               >
-                {project}
-              </motion.span>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Awards Section */}
-      <section className="py-24 px-6 bg-gray-900/30">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-light mb-4 text-gray-100">
-              수상 및 인정
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                year: "2024",
-                award: "대한민국 영상기술대상",
-                category: "조명 부문 최우수상",
-              },
-              {
-                year: "2023",
-                award: "아시아 필름 어워드",
-                category: "기술 공헌상",
-              },
-              {
-                year: "2022",
-                award: "한국영화촬영감독조명협회",
-                category: "올해의 조명감독",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.award}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 text-center"
-              >
-                <Trophy className="w-10 h-10 text-gray-500 mx-auto mb-4" />
-                <div className="text-gray-500 text-sm mb-2">{item.year}</div>
-                <h3 className="text-lg font-light text-gray-100 mb-1">
-                  {item.award}
-                </h3>
-                <p className="text-gray-400 text-sm">{item.category}</p>
-              </motion.div>
+                <span>{project}</span>
+                <span className="text-gray-600 group-hover:text-gray-400 text-sm">→</span>
+              </motion.a>
             ))}
           </div>
         </div>
