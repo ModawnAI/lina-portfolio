@@ -23,32 +23,22 @@ const staggerContainer = {
 
 const works = [
   {
-    title: "어둠 속의 빛",
-    year: "2024",
-    role: "조명감독",
-    platform: "Netflix",
-    description: "미스터리 스릴러",
+    title: "VFX Lighting Reel",
+    role: "VFX Lighting Artist",
+    description: "Portfolio Showreel",
+    link: "https://youtu.be/EM5tJK-B_hA?si=-WBZWy9AMMmKipaI",
   },
   {
-    title: "서울의 밤",
-    year: "2023",
-    role: "조명감독",
-    platform: "Netflix",
-    description: "로맨틱 드라마",
+    title: "Project Highlight 1",
+    role: "VFX Lighting Artist",
+    description: "Lighting & Compositing",
+    link: "https://youtu.be/lCe0Zic3Lko",
   },
   {
-    title: "시간의 문",
-    year: "2023",
-    role: "조명감독",
-    platform: "Netflix",
-    description: "SF 판타지",
-  },
-  {
-    title: "마지막 여정",
-    year: "2022",
-    role: "조명감독",
-    platform: "Netflix",
-    description: "액션 어드벤처",
+    title: "Project Highlight 2",
+    role: "VFX Lighting Artist",
+    description: "Lighting & Rendering",
+    link: "https://youtu.be/kFqKk1vqNNM",
   },
 ];
 
@@ -148,13 +138,15 @@ export default function Home() {
 
           <motion.div variants={fadeInUp} className="flex gap-4 justify-center">
             <Button asChild size="lg" className="gap-2">
-              <a href="https://www.artstation.com/artwork/P69xe3" target="_blank" rel="noopener noreferrer">
-                <Play className="w-4 h-4" />
+              <a href="https://www.artstation.com/kimlina" target="_blank" rel="noopener noreferrer">
+                <Play className="w-4 h-4" weight="fill" />
                 작품 보기
               </a>
             </Button>
-            <Button variant="outline" size="lg">
-              연락하기
+            <Button asChild variant="outline" size="lg">
+              <a href="#contact">
+                연락하기
+              </a>
             </Button>
           </motion.div>
         </motion.div>
@@ -287,10 +279,13 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {works.map((work, index) => (
-              <motion.div
+              <motion.a
                 key={work.title}
+                href={work.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -299,13 +294,9 @@ export default function Home() {
                 className="group relative bg-gray-900 border border-gray-800 rounded-xl overflow-hidden cursor-pointer"
               >
                 <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-950 flex items-center justify-center">
-                  <Play className="w-12 h-12 text-gray-600 group-hover:text-gray-400 transition-colors" />
+                  <Play className="w-12 h-12 text-gray-600 group-hover:text-gray-400 transition-colors" weight="fill" />
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Image src="/netflix-logo.svg" alt="Netflix" width={60} height={16} />
-                    <span className="text-gray-500 text-sm">{work.year}</span>
-                  </div>
                   <h3 className="text-xl font-light text-gray-100 mb-1">
                     {work.title}
                   </h3>
@@ -316,7 +307,7 @@ export default function Home() {
 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-gray-700/0 group-hover:bg-gray-700/10 transition-colors" />
-              </motion.div>
+              </motion.a>
             ))}
           </div>
 
@@ -326,8 +317,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <Button variant="outline" size="lg">
-              전체 작품 보기
+            <Button asChild variant="outline" size="lg">
+              <a href="https://www.artstation.com/kimlina" target="_blank" rel="noopener noreferrer">
+                Artstation에서 더 보기
+              </a>
             </Button>
           </motion.div>
         </div>
