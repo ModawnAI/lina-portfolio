@@ -251,7 +251,7 @@ export default function Home() {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                {["자연광 활용", "무드 라이팅", "컬러 그레이딩", "야간 촬영"].map(
+                {["Maya", "Nuke", "Arnold", "Substance Painter"].map(
                   (skill) => (
                     <span
                       key={skill}
