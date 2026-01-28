@@ -294,7 +294,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-light mb-4 text-gray-100">
-              주요 작품
+              Portfolio
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               빛과 그림자로 완성한 작품들을 소개합니다
